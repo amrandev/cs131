@@ -1,0 +1,58 @@
+    1  git clone https://github.com/amrandev/cs131.git
+    2  sudo apt-get update
+    3  sudo apt-get install git
+    4  git clone https://github.com/amrandev/cs131.git
+    5  cd cs131
+    6  mkdir ws2
+    7  cd ws2
+    8  echo $HOME
+    9  cd ~
+   10  pwd
+   11  cd cs131
+   12  cd ws2
+   13  id
+   14  ls /proc | grep mem
+   15  ls /proc | grep cpu
+   16  head /proc/meminfo
+   17  head /proc/cpuinfo
+   18  ls /etc | grep release
+   19  cat /etc/os-release
+   20  echo "WS2" > ws2.txt
+   21  echo "1Home Directory" >> ws2.txt
+   22  echo $HOME
+   23  echo "2) UID + groups" >>ws2.txt
+   24  id
+   25  echo "3) Memory & CPU" >> ws2.txt
+   26  ls /proc | grep mem
+   27  ls /proc | grep cpu
+   28  echo "4) Use head to check memory information" >> ws2.txt
+   29  head /proc/meminfo
+   30  echo "5) Use head, tail, cat to check the cpu information file" >> ws2.txt
+   31  head /proc/cpuinfo
+   32  tail /proc/cpuinfo
+   33  cat /proc/cpuinfo
+   34  echo "6) Identify operating system" >> ws2.txt
+   35  ls /etc | grep release
+   36  cat /etc/os-release
+   37  exit
+   38  cd cs131
+   39  cd ws2
+   40  echo "WS2" > ws2.txt
+   41  echo "1) Home Directory" >> ws2.txt
+   42  echo $HOME >> ws2.txt
+   43  echo "2) UID + Groups" >> ws2.txt
+   44  id >> ws2.txt
+   45  echo "3) Memory & CPU" >> ws2.txt
+   46  ls /proc | grep mem >> ws2.txt
+   47  ls /proc | grep cpu >> ws2.txt
+   48  echo "4) Use head to check memory information" >> ws2.txt
+   49  head /proc/meminfo >> ws2.txt
+   50  echo "5) Use head, tail, and cat to check CPU information" >> ws2.txt
+   51  head /proc/cpuinfo >> ws2.txt
+   52  tail /proc/cpuinfo >> ws2.txt
+   53  head /proc/cpuinfo >> ws2.txt
+   54  echo "6) Identify operating system" >> ws2.txt
+   55  ls /etc | grep release >> ws2.txt
+   56  cat /etc/os-release >> ws2.txt
+   57  vim ws2.txt
+   58  history > cmds.log
