@@ -1,0 +1,32 @@
+ 78  sudo apt-get install python3-pip
+   79  pip install gdown
+   80  apt install
+   81  sudo apt-get install python3-gdown
+   82  sudo apt-get install python3-venv
+   83  python3 -m venv ~/gdown-venv
+   84  deactivate
+   85  sudo apt-get install pipx
+   86  pipx --version
+   87  pipx install gdown
+   88  pipx ensurepath
+   89  source ~/.bashrc
+   90  gdown 1fc3saVu2GtG3Rft3zI-VOOsZhaqcSyn3
+   91  head 2019-01-h1.csv
+   92  cd cs 131
+   93  cd cs131
+   94  mkdir ws3
+   95  cd ws3
+   97  grep "2019-01-02" /home/amrit_randev/2019-01-h1.csv | cut -d, -f8 | sort | uniq -c | sort -nr | head -3
+   99  grep "2019-01-10" /home/amrit_randev/2019-01-h1.csv    | cut -d, -f8   | sort   | uniq -c   | sort -nr   | head -3
+  100  echo "WS3 Outputs" > ws3.txt
+  101  echo "1) Top 3 pickup locations January 2 2019" >> ws3.txt
+  102  grep "2019-01-02" /home/amrit_randev/2019-01-h1.csv | cut -d, -f8 | sort | uni
+  103  q -c | sort -nr | head -3 >> ws3.txt
+  104  vim ws3.txt
+  105  grep "2019-01-02" /home/amrit_randev/2019-01-h1.csv   | cut -d, -f8   | sort   | uniq -c   | sort -nr   | head -3 >> ws3.txt
+  106  echo "" >> ws3.txt
+  107  echo "2) Top 3 pickup locations January 10, 2019" >> ws3.txt
+  108  grep "2019-01-10" /home/amrit_randev/2019-01-h1.csv   | cut -d, -f8   | sort   | uniq -c   | sort -nr   | head -3 >> ws3.txt
+  109  echo "" >> ws3.txt
+  110  vim ws3.txt
+  111  history > cmds.log
