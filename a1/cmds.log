@@ -1,0 +1,143 @@
+  232  cd cs131
+  233  ls
+  234  mkdir a1
+  235  ls
+  236  cs a1
+  237  cd a1
+  238  vim .bashrc
+  239  echo $SHELL
+  240  vim ~/.bashrc
+  241  source ~/.bashrc
+  244  l
+  245  w
+  246  mkdir FARE
+  247  ls
+  248  cd fare
+  249  cd FARE
+  251  history 100
+  252  grep "^48.0,161.0" /home/amrit_randev/2019-01-h1.csv | cut -d',' -f7 > a1/FARE/48.0-161.0.txt
+  253  grep "^48.0,161.0" /home/amrit_randev/2019-01-h1.csv | cut -d',' -f7 > FARE/48.0-161.0.txt
+  254  ls
+  255  pwd
+  256  cd ..
+  257  pwd
+  258  ls
+  259  cd ws3
+  260  ls
+  261  cd ..
+  262  gdown 1fc3saVu2GtG3Rft3zI-VOOsZhaqcSyn3
+  263  cd a1
+  264  cd FARE
+  265  grep "^48.0,161.0" /home/amrit_randev/2019-01-h1.csv | cut -d',' -f7 > FARE/48.0-161.0.txt
+  266  cd ..
+  267  ls
+  268  cd 2019-01-h1.txt
+  269  cd cs131
+  270  ls
+  271  cd a1
+  272  cd FARE
+  273  vim .bashrc
+  274  ls
+  275  grep "^48.0,161.0" /home/amrit_randev/2019-01-h1.csv | cut -d',' -f7 > FARE/48.0-161.0.txt
+  276  ls -l
+  277  ls -l ~ | grep "2019-01-h1.csv"
+  278  cd cs131
+  279  cda1
+  280  cd a1
+  281  cd FARE
+  282  ls -l /home/amrit_randev/2019-01-h1.csv
+  283  mv ~/2019-01-h1.csv /home/amrit_randev/
+  284  head -n 5 /home/amrit_randev/2019-01-h1.csv
+  285  head -n 20 /home/amrit_randev/2019-01-h1.csv
+  286  ls -l
+  287  grep ",163.0,25.0," ~/2019-01-h1.csv | cut -d',' -f11 > FARE/163-25.txt
+  288  ls -l ~/2019-01-h1.csv
+  289  grep ",163.0,25.0," /home/amrit_randev/2019-01-h1.csv | cut -d',' -f11 > FARE/163-25.txt
+  290  cat FARE/163-25.txt
+  291  grep ",163,25," /home/amrit_randev/2019-01-h1.csv | cut -d',' -f11 > FARE/163-25.txt
+  292  ls -l FARE
+  293  ls -l
+  294  ls
+  295  grep ",163,25," /home/amrit_randev/2019-01-h1.csv | cut -d',' -f11 > 163-25.txt
+  296  ls
+  297  cat 163-25.ttxt
+  298  cat 163-25.txt
+  299  vim 163-25.txt
+  300  cat 163-25.txt
+  301  grep ",170.0,141.0," ~/2019-01-h1.csv | cut -d',' -f11 > 170-141.txt
+  302  cat FARE/170-141.txt
+  303  cat 170-141.txt
+  304  ls 
+  305  rm -163-25.txt
+  306  cd ..
+  307  rm FARE/163.0-25.0.txt
+  308  rm FARE/163-25.txt
+  309  cd FARE
+  310  ls
+  311  grep ",163,25," /home/am_ra/2019-01-h1.csv | cut -d',' -f11 > 163-25.txt
+  312  grep ",163,25," /home/amrit_randev/2019-01-h1.csv | cut -d',' -f11 > 163-25.txt
+  313  ls
+  314  cat FARE/163-25.txt
+  315  cat 163-25.txt
+  316  cat 170-141.txt
+  317  cat 163-25.txt
+  318  grep "163,25" /home/amrit_randev/2019-01-h1.csv
+  319  grep ",163,25," /home/amrit_randev/2019-01-h1.csv
+  320  cut -d',' -f8,9 /home/amrit_randev/2019-01-h1.csv | sort | uniq -c | sort -nr | head -10
+  321  cut -d',' -f8,9 /home/amrit_randev/2019-01-h1.csv | sort | uniq -c | sort -nr | head -30
+  322  cut -d',' -f8,9 /home/amrit_randev/2019-01-h1.csv | sort | uniq -c | sort -nr | head -100
+  323  cut -d',' -f8,9 /home/amrit_randev/2019-01-h1.csv | sort | uniq -c | sort -nr | head -150
+  324  grep ',79.0,137.0,' /home/amrit_randev/2019-01-h1.csv | cut -d',' -f11 > 79-137.txt
+  325  ls
+  326  cd ..
+  327  rm FARE/163-25.txt
+  328  cat 79-137.txt
+  329  cat FARE/79-137.txt
+  330  touch a1.txt
+  331  ls
+  332  echo "#1a: Output of 'l' alias" >> a1.txt
+  333  l >> a1.txt
+  334  echo "#1b: Output of 'w' alias" >> a1.txt
+  335  w >> a1.txt
+  336  echo "#2a:'FARE' directory" >> a1.txt
+  337  ls -l >> a1.txt
+  338  cd FARE
+  339  ls
+  340  cd ..
+  341  echo "#2b: Extracting fare amounts for pickup 170 → dropoff 141" >> a1.txt
+  342  cat FARE/170-141.txt >> a1.txt
+  343  echo "#2b: Extracting fare amounts for pickup 79 to dropoff 137" >> a1.txt
+  344  cat FARE/79-137.txt >> a1.txt
+  345  sum1=$(paste -sd+ FARE/163-25.txt | bc)
+  346  sum1=$(paste -sd+ FARE/170-141.txt | bc)
+  347  sum2=$(paste -sd+ FARE/170-141.txt | tr -d '\n' | sed 's/+$//')
+  348  count2=$(wc -l < FARE/170-141.txt)
+  349  mean2=$((sum2 / count2))
+  350  sudo apt update && sudo apt install -y bc
+  351  echo "scale=2; 10 / 3" | bc
+  352  sum2=$(paste -sd+ FARE/170-141.txt | bc)
+  353  count2=$(wc -l < FARE/170-141.txt)
+  354  mean2=$(echo "scale=2; $sum2 / $count2" | bc -l)
+  355  sum4=$(paste -sd+ FARE/79
+
+  356  mean2=$(echo "scale=2; $sum2 / $count2" | bc -l)
+  357  echo $mean4
+  358  echo $mean2
+  359  sum4=$(paste -sd+ FARE/79-137.txt | bc)
+  360  count4=$(wc -l < FARE/79-137.txt)
+  361  mean4=$(echo "scale=2; $sum4 / $count4" | bc -l)
+  362  echo $mean4
+  363  echo "#2c: Mean fare calculation results" >> a1.txt
+  364  echo "---For 170-141: $mean2" >> a1.txt
+  365  echo "---For 79-137: $mean4" >> a1.txt
+  366  cat a1.txt
+  367  vim a1.txt
+  368  ls
+  369  cd FARE
+  370  ls
+  371  cd ..
+  372  git add a1/a1.txt a1/cmds.log a1/FARE/
+  373  cd ..
+  374  git add a1/a1.txt a1/cmds.log a1/FARE/
+  375  cd a1
+  376  history > cmds.log

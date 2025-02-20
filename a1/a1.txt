@@ -1,0 +1,40 @@
+#1a: Output of 'l' alias
+total 8
+drwxr-xr-x 2 amrit_randev amrit_randev 4096 Feb 20 08:40 FARE
+-rw-r--r-- 1 amrit_randev amrit_randev   25 Feb 20 08:43 a1.txt
+
+#1b: Output of 'w' alias
+      3      20     134
+
+#2a:'FARE' directory
+total 8
+drwxr-xr-x 2 amrit_randev amrit_randev 4096 Feb 20 08:40 FARE
+-rw-r--r-- 1 amrit_randev amrit_randev  229 Feb 20 08:45 a1.txt
+
+#2b: Extracting fare amounts for pickup 170 → dropoff 141 (showing first 10 lines)
+6.5
+12.0
+9.0
+8.5
+8.0
+10.0
+7.5
+12.5
+7.5
+8.5
+
+#2b: Extracting fare amounts for pickup 79 to dropoff 137 (showing first 10 lines)
+6.5
+7.5
+5.0
+7.5
+6.0
+8.0
+8.0
+6.5
+7.5
+8.0
+
+#2c: Mean fare calculation results
+---For 170-141: 9.32
+---For 79-137: 6.52
