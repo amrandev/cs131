@@ -1,0 +1,63 @@
+  646  mkdir ws56
+  647  ls
+  648  cd ws56/
+  673  history
+  674  cd cs131
+  675  cd ws56/
+  679  awk 'BEGIN {FS=","} {if ($13 >= 10.0) print $17} >> testtask2-2.txt
+
+q
+k
+clear
+z
+
+!!:s^k
+  680  awk 'BEGIN {FS=","} {if ($13 >= 10.0) print $17}' >> testtask2-2.txt
+  681  pathname 2019-01-h1.csv
+  682  realpath  2019-01-h1.csv
+  683  awk 'BEGIN {FS=","} {if ($13 >= 10.0) print $17}' /home/amrit_randev/cs131/2019-01-h1.csv >> testtask2-2.txt
+  684  ls
+  685  head -10 testtask2-2.txt 
+  686  awk 'BEGIN {FS=","} {if ($17 >= 10.0) print $13}' /home/amrit_randev/cs131/2019-01-h1.csv >> t2.txt
+  687  head -10 t2.txt 
+  688  awk 'BEGIN {FS=","} {if ($17 >= 10.0) print $14}' /home/amrit_randev/cs131/2019-01-h1.csv >> t3.txt
+  689  head -10 t3.txt 
+  690* awk 'BEGIN {FS=","} {if (shells[$17] >= 10.0)} END {for (s in shells} print ' /home/amrit_randev/cs131/2019-01-h1.csv >> t4.txt
+  691  head -1 /home/amrit_randev/cs131/ws56/2019-01-h1.csv
+  692  head -1 /home/amrit_randev/cs131//2019-01-h1.csv
+  701  ls
+  702  vim ws56.txt 
+  703  head -10 awk /home/amrit_randev/cs131/2019-01-h1.csv
+  704  sed -n '/^2\.0,/p' /home/amrit_randev/cs131/2019-01-h1.csv >> vendor2.csv
+  705  head -10 vendor2.csv 
+  706  wc vendor2.csv 
+  707  wc vendor2.csv >> ws56.txt 
+  708  vim ws56.txt 
+  709  head -10 no-separators.csv > ws56.txt 
+  710  vim ws56.txt 
+  711  wc vendor2.csv >> ws56.txt 
+  712  vim ws56.txt 
+  713  head -10 no-separators.csv >> ws56.txt 
+  714  vim ws56.txt 
+  715  sed 's/.[0-9]+//' no-seperators.csv>> test.txt
+  716  sed 's/.[0-9]+//' no-separators.csv>> test.txt
+  717  head -10 test.txt 
+  718  sed -E '/s/\.[0-9]+//g' no-separators.csv > no-fractions.csv
+  719  sed -E 's/\.[0-9]+//g' no-separators.csv > no-fractions.csv
+  720  head -10 no-fractions.csv 
+  721  head -10 no-fractions.csv >> ws56.txt 
+  722  vim ws56.txt 
+  723  awk -F, '{if ($17 >= 10.0) {tips[$14]++ }}END {for (t in tips) {print t, tips[t]}}' /home/amrit_randev/cs131/2019-01-h1.csv
+  724  awk -F, '{if ($17 >= 10.0) {tips[$14]++ }}END {for (t in tips) {print t, tips[t]}}' | sort /home/amrit_randev/cs131/2019-01-h1.csv
+  725  awk -F, '{if ($17 >= 10.0) {tips[$14]++ }}END {for (t in tips) {print t, tips[t]}}' /home/amrit_randev/cs131/2019-01-h1.csv >> ws56.txt 
+  726  vim ws56.txt 
+  727  awk -F, '{ alltips[$14]++ }END { for (t in alltips) {print t, alltips[t]}}' /home/amrit_randev/cs131/2019-01-h1.csv\ | sort -k2,2nr \ | head -20 >> ws56.txt
+  728  awk -F, '{ alltips[$14]++ }END { for (t in alltips) {print t, alltips[t]}}' /home/amrit_randev/cs131/2019-01-h1.csv \ | sort -k2,2nr \ | head -20 >> ws56.txt
+  729  awk -F, '{ alltips[$14]++ }
+END {
+  for (t in alltips) {
+    print t, alltips[t]
+  }
+}' /home/amrit_randev/cs131/2019-01-h1.csv | sort -k2,2nr | head -20 >> ws56.txt
+  730  vim ws56.txt 
+  731  history > cmnd.log
