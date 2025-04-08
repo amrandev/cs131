@@ -1,0 +1,195 @@
+  828  mkdir a3
+  829  cd a3
+  830  touch grades.csv
+  831  StudentID,Name,CS146,CS131,CS100W >> grades.csv 
+  832  echo "StudentID,Name,CS146,CS131,CS100W" >> grades.csv
+  833  cat grades.csv 
+  834  echo "101,Alice,85,90,78" >> grades.csv 
+  835  echo "102,Bob,76,82,88" >> grades.csv 
+  836  echo "103,Charlie,90,85,95" >> grades.csv
+  837  cat grades.csv 
+  838  echo "104,David,65,70,60" >> grades.csv 
+  839  echo "105,Eve,88,92,85" >> grades.csv
+  840  cat grades.csv 
+  841  awk {print $1} grades.csv
+  842  awk -F {print $1}
+  843  awk -F {print $1} grades.csv
+  844  awk 'BEGIN {FS=","} {print $1} grades.csv
+  845  awk 'BEGIN {FS=","} {print $1}' grades.csv
+  846  awk 'BEGIN {FS=","} {print $1 and $2}' grades.csv
+  847  awk 'BEGIN {FS=","} {print $1 "and" $2}' grades.csv
+  848  awk 'BEGIN {FS=","} {print $1 " and " $2}' grades.csv
+  866  awk 'BEGIN {F=","} {sum; for (i=3; i<=NF; i++) {sum+=$i; print $i}  print sum}' gr.csv
+  867  awk 'BEGIN {F=","} {sum=0; for (i=3; i<=NF; i++) {sum+=$i; print $i;}  print sum}' gr.csv
+  868  awk 'BEGIN {F=","} {sum=0; for (i=3; i<=NF; i++) {sum+=$i; print $i;}}' gr.csv
+  869  awk 'BEGIN {F=","} {sum=0; for (i=3; i<=NF; i++) {sum+=$i; print $i}}' gr.csv
+  870  awk 'BEGIN {F=","} {sum=0; for (i=3; i<=NF; i++) {sum+=$i print $i}}' gr.csv
+  871  awk 'BEGIN {F=","} {sum=0; for (i=3; i<=NF; i++) {sum+=$i; print i;}  print sum}' gr.csv
+  872  awk 'BEGIN {F=","} { for (i=3; i<=NF; i++) { print i;}}' gr.csv
+  873  awk 'BEGIN {F=","} { for (i=3; i<=NF; i++) { print $i;}}' gr.csv
+  874  awk 'BEGIN {F=","} (sum = $3 + $4 + $5 print sum}' gr.csv
+  888  awk -F"," '{print $1 + $3}' grades.csv
+  889  cat grades.csv
+  890  awk 'BEGIN {F=","} {print $3, " and " $4, " and " $5}' gr.csv
+  891  awk -F"," '{print $3+4+5}' grades.csv
+  892  awk -F"," '{print $3+$4+$5}' grades.csv
+  893  awk -F"," '{sum=0; for (i=3; i<=NF; i++) {sum+=$i} print sum}' grades.csv
+  894  awk -F"," '{sum=0; for (i=3; i<=NF; i++) {sum+=$i; arr[i-3}=$i; print sum, " and " arr}' grades.csv
+  895  awk -F"," '{sum=0; arr[$1]++; for (i=3; i<=NF; i++) {sum+=$i; arr[i-3}=$i; print sum, " and " arr}' grades.csv
+  896  awk -F"," '{sum=0; arr[$1]++; for (i=3; i<=NF; i++) {sum+=$i; arr[i-3}=$i;} print sum, " and " arr}' grades.csv
+  897  awk -F"," '{sum=0; arr[$1]++; for (i=3; i<=NF; i++) {sum+=$i; arr[i-3]=$i;} print sum, " and " arr}' grades.csv
+  905  awk -F"," '{sum=0; arr[$1]++; for (i=3; i<=NF; i++) {sum+=$i;} arr[i-3]=sum; printarr[i-3] }' grades.csv
+  906  awk -F"," '{sum=0; arr[$1]++; for (i=3; i<=NF; i++) {sum+=$i; if (i = NF){arr[i-3]=sum} print arr[i-3] }' grades.csv
+  907  awk -F"," '{sum=0; arr[$1]++; for (i=3; i<=NF; i++) {sum+=$i;} arr[i-3]=sum; print arr[i-3] }' grades.csv
+  908  awk -F"," '{sum=0; arr[$1]++; for (i=3; i<=NF; i++) {sum+=$i; if (i = NF){arr[i-3]=sum}} print arr[i-3] }' grades.csv
+  909  awk -F"," '{sum=0; arr[$1]++; for (i=3; i<=NF; i++) {sum+=$i; if (i = NF-1){arr[i-3]=sum}} print arr[i-3] }' grades.csv
+  910  awk -F"," '{sum=0; arr[$1]++; for (i=3; i<=NF; i++) {sum+=$i; if (i+1 = NF){arr[i-3]=sum}} print arr[i-3] }' grades.csv
+  911  awk -F"," '{sum=0; arr[$1]++; for (i=3; i<=NF; i++) {sum+=$i;} arr[i-3]=sum; print arr[i-3] }' grades.csv
+  912  ls
+  913  vim grader.awk 
+  914  cat grader.awk 
+  915  awk -F"," '{sum=0; arr[$2]++; for (i=3; i<=NF; i++) {sum+=$i;} arr[i-3]=sum; print arr[i-3] }' grades.csv
+  916  vim grader.awk
+  917  ./grader.awk
+  918  chmod 700 grader.awk
+  919  ./grader.awk
+  920  touch sample.sh
+  921  vim grader.awk
+  922  vim sample.sh
+  923  vim grader.awk
+  924  vim sample.sh
+  925  vim grader.awk
+  926  vim sample.sh
+  927  ./sample.sh 
+  928  chmod 700 sample.sh
+  929  ./sample.sh 
+  930  vim sample.sh
+  931  ./sample.sh 
+  932  vim sample.sh
+  933  ./sample.sh 
+  934  ./sample.sh 2 4 5
+  935  vim sample.sh
+  936  ./sample.sh 2 4 5
+  937  vim sample.sh
+  938  ./sample.sh 2 4 5
+  939  vim sample.sh
+  940  ./sample.sh 
+  941  vim sample.sh
+  942  ./sample.sh 
+  943  vim sample.sh
+  944  ./sample.sh 
+  945  ./sample.sh 2 4 5
+  946  vim sample.sh
+  947  ./sample.sh 2 4 5
+  992  awk -F"," '{sum=0;max=-1;min=(2^32); arr[$2]++; for (i=3; i<=NF; i++) {sum+=$i;} if(sum > max){max=sum;} else if (sum < min) {min=sum;}  arr[i-3]=sum; print arr[i-3]} {print max, " " min}' grades.csv
+  993  awk -F"," '{sum=0;max=-1;min=(2^32); arr[$2]++; for (i=3; i<=NF; i++) {sum+=$i;} arr[i-3]=sum; print arr[i-3]} END {for (i in arr)if(sum > max){max=sum;} else if (sum < min) {min=sum;}}' grades.csv
+  994  awk -F"," '{sum=0;max=-1;min=(2^32); arr[$2]++; for (i=3; i<=NF; i++) {sum+=$i;} arr[i-3]=sum; print arr[i-3]} END {for (i in arr)if(sum > max){max=sum;} else if (sum < min) {min=sum;}print min, " " max}' grades.csv
+  995  awk -F"," '{sum=0; arr[$2]++; for (i=3; i<=NF; i++) {sum+=$i;} arr[i-3]=sum; print arr[i-3]} END {max=-1;min=(2^32); for (i in arr){if(sum > max){max=sum;} else if (sum < min) {min=sum;}}print min, " " max}' grades.csv
+  996  awk -F"," '{sum=0; arr[$2]++; for (i=3; i<=NF; i++) {sum+=$i;} arr[i-3]=sum; print arr[i-3]} END {max=-1;min=(2^32); for (i in arr){if(arr[i] > max){max=sum;} else if (arr[i] < min) {min=sum;}}print min, " " max}' grades.csv
+  997  awk -F"," '{sum=0; arr[$2]++; for (i=3; i<=NF; i++) {sum+=$i;} arr[i-3]=sum; print arr[i-3]} END {max=-1;min=(2^32); for (i in arr){if(arr[i] > max){max=arr[i];} else if (arr[i] < min) {min=arr[i];}}print min, " " max}' grades.csv
+ 1001  awk -F"," '{sum=0; arr[$3$4$5]++; for (i=3; i<=NF; i++) {sum+=$i;} arr[i-3]=sum; print arr[i-3]} END {max=-1;min=(2^32); for (i in arr){print i; if(arr[i] > max){max=arr[i];} else if (arr[i] < min) {min=arr[i];}}print min, " " max}' grades.csv
+ 1002  awk -F"," '{sum=0; arr[$3,$4,$5]++; for (i=3; i<=NF; i++) {sum+=$i;} arr[i-3]=sum; print arr[i-3]} END {max=-1;min=(2^32); for (i in arr){print i; if(arr[i] > max){max=arr[i];} else if (arr[i] < min) {min=arr[i];}}print min, " " max}' grades.csv
+ 1003  ls -l
+ 1004  echo $PATH
+ 1005  df
+ 1006  df -h
+ 1007  du
+ 1008  clear
+ 1009  cd cs131
+ 1010  cd a3
+ 1011  l
+ 1012  ls
+ 1013  grades.csv -ef grader.awk
+ 1014  chmod 700 grades.csv 
+ 1015  grades.csv -ef grader.awk
+ 1016  grades.csv -nt  grader.awk
+ 1017  -f grades.csv
+ 1018  cd ..
+ 1019  a3 *
+ 1020  cd a3
+ 1021  *
+ 1022  vim grader.awk
+ 1023  vim sample.sh 
+ 1024  vim grader.awk
+ 1025  cd cs131/
+ 1026  ls
+ 1027  cd a3
+ 1028  ls
+ 1029  cat grades.csv
+ 1030  cat gr.csv 
+ 1031  cat sample.sh 
+ 1032  cat grader.awk
+ 1033  awk -F"," '{sum=0; arr[$1]++; for (i=3; i<=NF; i++) {sum+=$i;} arr[i-3]=sum; print arr[i-3] }' grades.csv
+ 1034  awk -F"," '{sum=0; arr[$1]++; for (i=3; i<=NF; NR!=1; i++) {sum+=$i;} arr[i-3]=sum; print arr[i-3] }' grades.csv
+ 1035  awk -F"," '{sum=0; arr[$1]++; for (i=3; i<=NF; i++) {if (NR!=1){sum+=$i;}} arr[i-3]=sum; print arr[i-3] }' grades.csv
+ 1036  awk -F"," '{sum=0; arr[$1]++; for (i=3; i<=NF; i++) {if (NR!=0){sum+=$i;}} arr[i-3]=sum; print arr[i-3] }' grades.csv
+ 1037  ./sample.sh 2 3 4
+ 1038  ./sample.sh calc_average 1 2 3
+ 1039  awk -F"," '{NR == 1{next}sum=0; arr[$1]++; for (i=3; i<=NF; i++) {sum+=$i;} arr[i-3]=sum; print arr[i-3] }' grades.csv
+ 1040  ls
+ 1041  cat grader.awk 
+ 1042  vim grader.awk 
+ 1043  awk -f grader.awk grades.csv
+ 1044  vim grader.awk 
+ 1045  awk -f grader.awk grades.csv
+ 1046  vim grader.awk 
+ 1047  awk -f grader.awk grades.csv
+ 1048  vim grader.awk 
+ 1049  awk -f grader.awk grades.csv
+ 1050  cat gr.csv 
+ 1051  vim grader.awk 
+ 1052  awk -f grader.awk grades.csv
+ 1053  vim grader.awk 
+ 1054  awk -f grader.awk grades.csv
+ 1055  vim grader.awk 
+ 1056  awk -f grader.awk grades.csv
+ 1057  vim grader.awk 
+ 1058  awk -f grader.awk grades.csv
+ 1059  vim grader.awk 
+ 1060  cd cs1
+ 1061  cd cs131/
+ 1062  cd a3
+ 1063  ls
+ 1064  vim grader.awk 
+ 1065  awk -f grader.awk grades.csv
+ 1066  vim grader.awk 
+ 1067  awk -f grader.awk grades.csv
+ 1068  vim grader.awk 
+ 1069  awk -f grader.awk grades.csv
+ 1070  vim grader.awk 
+ 1071  awk -f grader.awk grades.csv
+ 1072  vim grader.awk 
+ 1073  awk -f grader.awk grades.csv
+ 1074  vim grader.awk 
+ 1075  awk -f grader.awk grades.csv
+ 1076  vim grader.awk 
+ 1077  cd cs131
+ 1078  cd a3
+ 1079  ls
+ 1080  touch a3.txt
+ 1081  vim a3.txt 
+ 1082  vim grader.awk
+ 1083  cd cs131/
+ 1084  cd a3
+ 1085  ls
+ 1086  vim grader.awk 
+ 1087  awk -f grader.awk grades.csv
+ 1088  vim grader.awk 
+ 1089  awk -f grader.awk grades.csv
+ 1090  vim grader.awk 
+ 1091  awk -f grader.awk grades.csv
+ 1092  vim a3.txt 
+ 1093  awk -f grader.awk grades.csv
+ 1094  vim a3.txt 
+ 1095  vim grader.awk 
+ 1096  vim a3.txt 
+ 1097  vim grader.awk 
+ 1098  ls
+ 1099  rm -r sample.sh 
+ 1100  ls
+ 1101  rm -r gr.csv 
+ 1102  ls
+ 1103  git add a3.txt grader.awk grades.csv
+ 1104  git status
+ 1105  touch cmnd.log
+ 1106  history > cmnd.log

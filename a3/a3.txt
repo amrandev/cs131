@@ -1,0 +1,53 @@
+A3 
+
+1. Stores the sum of grades for each student in an associative array.
+Student Name: Bob Grade Sum: 246
+Student Name: Eve Grade Sum: 265
+Student Name: David Grade Sum: 195
+Student Name: Alice Grade Sum: 253
+Student Name: Charlie Grade Sum: 270
+
+2.Calculates the average grade for each student and classifies them as Pass (average ≥ 70) or Fail. (Must use a user-defined function to calculate the average.)
+
+Student Name: Bob Status: Pass
+Student Name: Eve Status: Pass
+Student Name: David Status: Fail
+Student Name: Alice Status: Pass
+Student Name: Charlie Status: Pass
+
+3.Determine the highest and lowest scoring students (total score)
+
+Top score: Charlie with 270
+Lowest score: David with 195
+
+4.Print totals for students
+
+Name: Bob
+Total Score: 246
+Average: 82.00
+Status:Pass
+ 
+Name: Eve
+Total Score: 265
+Average: 88.33
+Status:Pass
+ 
+Name: David
+Total Score: 195
+Average: 65.00
+Status:Fail
+ 
+Name: Alice
+Total Score: 253
+Average: 84.33
+Status:Pass
+ 
+Name: Charlie
+Total Score: 270
+Average: 90.00
+Status:Pass
+ 
+5.Print the top and lowest scoring students
+
+Top score: Charlie with 270
+Lowest score: David with 195 
